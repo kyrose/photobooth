@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway&display=swap');
+$black: #232b2b;
+$white: #f9f1f1;
+$gray: #334431;
+$pink: #f2cbbc;
+$orange: #e05038;
+$blue: #3d3e8a;
+$rose: #e47485;
+$red: #EF2539;
+
+* {
+	box-sizing: border-box;
+	::selection {
+		background: $pink;
+		color     : $white;
+	}
+}
+
+body {
+	background: $white;
+	color     : $black;
+	font      : 12pt 'Raleway', sans-serif;
+	margin    : 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Playfair Display', serif;
+}
+
+.container-landing {
+  /* Sizing */
+	width                : 100vw;
+	height               : 100vh;
+  /* Flexbox */
+	display              : flex;
+  justify-content: center;
+  align-items: center;
+  /* Background style */
+  background-image: url('/assets/images/photobooth-bkgALT.png');
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto 75vh;
+  /* Text style */
+  text-align: center;
+
+  .landing{
+    margin: 2em auto;
+  }
+
+  .landing-text {
+    color: $red;
+    font-size: 12em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
+}
