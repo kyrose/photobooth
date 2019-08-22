@@ -1,26 +1,36 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700,900|Old+Standard+TT&display=swap');
 $black: #232b2b;
 $white: #f9f1f1;
-$gray: #334431;
+$forest: #334431;
 $pink: #f2cbbc;
-$orange: #e05038;
+$orange: #fa5951;
+$dkorange: #e4514a;
 $blue: #3d3e8a;
 $rose: #e47485;
-$red: #EF2539;
+$green: #4ce0b3;
 
 * {
-	box-sizing: border-box;
+	//box-sizing: border-box;
+	// outline   : 1px solid hotpink;
 	::selection {
-		background: $pink;
-		color     : $white;
+		background: $orange;
+		color     : $black;
 	}
 }
 
 body {
-	background: $white;
-	color     : $black;
-	font      : 12pt 'Raleway', sans-serif;
+	background: rgba($pink, 0.5);
+	color     : $orange;
+	font      : 16pt 'Playfair Display', 'Old Standard TT', serif;
 	margin    : 0;
+	overflow-x: hidden;
+	transition: font-size .3s ease;
+	@media (max-width: 1660px) {
+		font-size: 14pt;
+	}
+	@media (max-width: 1280px) {
+		font-size: 12pt;
+	}
 }
 
 h1,
@@ -29,34 +39,44 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Playfair Display', serif;
+	font-family: 'Playfair Display', 'Old Standard TT', serif;
+	font-weight: 900;
 }
 
-.container-landing {
-  /* Sizing */
-	width                : 100vw;
-	height               : 100vh;
-  /* Flexbox */
-	display              : flex;
-  justify-content: center;
-  align-items: center;
-  /* Background style */
-  background-image: url('/assets/images/photobooth-bkgALT.png');
-  background-attachment: fixed;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: auto 75vh;
-  /* Text style */
-  text-align: center;
+figure {
+	margin: 0;
+}
 
-  .landing{
-    margin: 2em auto;
-  }
+img {
+	border-style: none;
+	display     : block;
+	width       : 50%;
 
-  .landing-text {
-    color: $red;
-    font-size: 12em;
-    margin-top: 0;
-    margin-bottom: 0.5em;
-  }
+	&::before {
+		content    : '';
+		padding-top: 100%;
+		float      : left;
+	}
+
+	&::after {
+		content: '';
+		display: block;
+		clear  : both;
+	}
+}
+
+.large {
+	display        : block;
+	margin: 0 auto;
+  padding-bottom: 2em;
+	transform      : rotate(90deg);
+	color          : $black;
+	font-size      : 9em;
+	font-weight    : 900;
+	text-decoration: none;
+
+	&:focus,
+	&:hover {
+		color: $green;
+	}
 }

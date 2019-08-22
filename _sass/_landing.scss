@@ -1,0 +1,57 @@
+#container-landing {
+	/* Sizing */
+	width                : 100vw;
+	height               : 100vh;
+	/* Flexbox */
+	display              : flex;
+	justify-content      : center;
+	align-items          : center;
+	/* Background style */
+	background-image     : url('/assets/images/photobooth-bkgALT.png');
+	background-attachment: fixed;
+	background-position  : center center;
+	background-repeat    : no-repeat;
+	background-size      : auto 75vh;
+	/* Text style */
+	text-align           : center;
+
+	.landing {
+		margin: 2em auto;
+	}
+
+	#landing-text {
+		color                    : rgba(0, 0, 0, 0.01);
+		-webkit-text-stroke-width: 5px;
+		-webkit-text-stroke-color: $dkorange;
+		font-size                : 9em;
+		font-weight              : 700;
+		letter-spacing           : -.05em;
+		margin-top               : 0;
+		margin-bottom            : .5em;
+		transition               : font-size .3s ease;
+	}
+}
+
+.btn {
+	/* Positioning and sizing */
+	display        : block;
+	margin         : 0 auto;
+	transform      : rotate(90deg);
+	//padding: 1em;
+	width          : 100px;
+	height         : 100px;
+	background     : $orange;
+	border-radius  : 50%;
+	transition     : background .7 ease;
+	/* Text styling */
+	color          : $white;
+	font-family    : inherit;
+	font-size      : 3em;
+	font-weight    : 900;
+	text-decoration: none;
+
+	&:hover {
+		background: $green;
+		color     : $black;
+	}
+}

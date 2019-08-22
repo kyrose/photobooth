@@ -1,0 +1,104 @@
+/**
+  * FLEX **/
+.flex {
+	display              : -webkit-box;
+	display              : -ms-flexbox;
+	display              : flex;
+	-webkit-box-orient   : horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-flow        : row wrap;
+	flex-flow            : row wrap;
+}
+/**
+  /* JUSTIFY */
+
+.justify-start {
+	-webkit-box-pack: start;
+	-ms-flex-pack   : start;
+	justify-content : flex-start;
+}
+
+.justify-end {
+	-webkit-box-pack: end;
+	-ms-flex-pack   : end;
+	justify-content : flex-end;
+}
+
+.justify-ctr {
+	-webkit-box-pack: center;
+	-ms-flex-pack   : center;
+	justify-content : center;
+}
+
+.justify-btw {
+	-webkit-box-pack: justify;
+	-ms-flex-pack   : justify;
+	justify-content : space-between;
+}
+
+.justify-around {
+	-ms-flex-pack  : distribute;
+	justify-content: space-around;
+}
+
+.justify-even {
+	-webkit-box-pack: space-evenly;
+	-ms-flex-pack   : space-evenly;
+	justify-content : space-evenly;
+}
+/**
+  * ALIGN **/
+.align-start {
+	-webkit-box-align  : start;
+	-ms-flex-align     : start;
+	align-items        : flex-start;
+	-ms-flex-item-align: start;
+	align-self         : flex-start;
+}
+
+.align-end {
+	-webkit-box-align  : end;
+	-ms-flex-align     : end;
+	align-items        : flex-end;
+	-ms-flex-item-align: end;
+	align-self         : flex-end;
+}
+
+.align-ctr {
+	-webkit-box-align  : center;
+	-ms-flex-align     : center;
+	align-items        : center;
+	-ms-flex-item-align: center;
+	-ms-grid-row-align : center;
+	align-self         : center;
+}
+
+.align-stretch {
+	-webkit-box-align  : stretch;
+	-ms-flex-align     : stretch;
+	align-items        : stretch;
+	-ms-flex-item-align: stretch;
+	-ms-grid-row-align : stretch;
+	align-self         : stretch;
+}
+
+.align-baseline {
+	-webkit-box-align  : baseline;
+	-ms-flex-align     : baseline;
+	align-items        : baseline;
+	-ms-flex-item-align: baseline;
+	align-self         : baseline;
+}
+
+.transX {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.transY {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.transZ {
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
