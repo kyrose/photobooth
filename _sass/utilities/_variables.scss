@@ -1,0 +1,30 @@
+/**
+  * Project Variables
+  * Variables should only be defined if:
+  * * 1. the value is repeated more than once
+  * * 2. the value is likely to be updated
+  * * 3. all occurences of the value are tied to the variable, no coincidence
+  */
+
+/* Color Palette*/
+$sand: #f7e5de;
+$silk: #c4b2ac;
+$carnation: #fa5951;
+$tangerine: #ff8c7e;
+$mojo: #cd4943;
+$white: #f9f1f1;
+
+
+/* Colors to use-case name*/
+$primary: $sand;
+$p-dark: $silk;
+$secondary: $carnation;
+$s-light: $tangerine;
+$s-dark: $mojo;
+
+/* Fonts */
+$main-font: 'Lulo', 'Playfair Display', serif;
+$link-font: 'Cooper Hewitt', 'Oswald', serif;
+
+/* Breakpoints */
+// Define per object

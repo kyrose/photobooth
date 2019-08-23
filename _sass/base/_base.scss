@@ -1,0 +1,29 @@
+/**
+  * Standard styles for commonly used HTML elements
+  *
+  * Declaration order guidelines:
+  * * Positioning: position, z-index, top, right, bottom, left
+  * * Display & box model: display, overflow, box-sizing, width, height, padding, border, margin
+  * * Other: background, color, fonts...
+  */
+
+body {
+  @include ease-in-out-quad(font-size);
+  margin: 0;
+  overflow-x: hidden; /* fixes issue where width:100vw extends page past screen */
+  background: $primary;
+  color: $secondary;
+  font-family: $main-font;
+  font-size: 32pt;
+}
+
+img {
+  @include clearfix;
+
+  display: block;
+  border-style: none;
+
+  &::before {
+    padding-top: 100%;
+  }
+}

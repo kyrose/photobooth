@@ -1,0 +1,18 @@
+/**
+  * Webfont imports
+  */
+
+
+@font-face {
+  font-family: 'Cooper Hewitt';
+  src: url('/assets/fonts/CooperHewitt-BoldItalic.eot'),
+       url('/assets/fonts/CooperHewitt-BoldItalic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Lulo';
+    src: url('lulo-webfont.woff2') format('woff2'),
+         url('lulo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

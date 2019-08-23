@@ -1,0 +1,121 @@
+/**
+  * Project mixins
+  * any group of CSS properties that appears together frequently, and not due to coincidence, are candidates for mixins!
+  *
+  * Declaration order guidelines:
+  * * Positioning: position, z-index, top, right, bottom, left
+  * * Display & box model: display, overflow, box-sizing, width, height, padding, border, margin
+  * * Other: background, color, fonts...
+  */
+
+
+/**
+  * Equal height and max-width
+  */
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+
+/**
+  * Transitions
+  */
+@mixin ease-in-out-back($property, $time: .6s) {
+  -webkit-transition: $property $time cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: $property $time cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: $property $time cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@mixin ease-in-out-quad($property, $time: .6s) {
+  -webkit-transition: $property $time cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -o-transition: $property $time cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: $property $time cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+/**
+  * For fixed backgrounds
+  * 1. Enter $uri val with quotes
+  */
+@mixin fixed-bkg($uri) {
+  background-image: url($uri);  /* 1 */
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/**
+  * Clearfix mixin
+  * 1. Causes space to appear at top/bottom of elements
+  * 2. Contains top-margins of child elements
+  */
+@mixin clearfix {
+  &::before,
+  &::after {
+    content: " ";    /* 1 */
+    display: table;  /* 2 */
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+
+/**
+  * Frequently used flexbox declarations
+  */
+@mixin flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+	-ms-flex-pack   : center;
+	justify-content : center;
+}
+
+@mixin flex-row {
+  @include flex;
+
+  -webkit-box-orient   : horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-flow        : row wrap;
+	flex-flow            : row wrap;
+}
+
+@mixin flex-col {
+  @include flex;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+}
+
+
+/**
+  * Translate position of objects for parallax scrolling
+  */
+@mixin translate($val) {
+  -webkit-transform: translateZ($val);
+  transform: translateZ($val);
+}
+
+
+/**
+  * Full page containers / heros
+  */
+@mixin hero($bkg-img-uri, $text-align) {
+  @include flex;
+  @include fixed-bkg($bkg-img-uri);
+
+  width: 100vw;
+  height: 100vh;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: $text-align;
+}

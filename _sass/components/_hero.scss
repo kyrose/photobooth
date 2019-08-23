@@ -1,0 +1,10 @@
+.hero-container {
+  @include hero('/assets/images/bkg-solo.png', center);
+
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  margin: 2em auto;
+}
