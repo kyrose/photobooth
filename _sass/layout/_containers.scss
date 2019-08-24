@@ -16,7 +16,6 @@
   }
 }
 
-
 /**
   * The timeline of our photobooth photostrip
   */
@@ -25,9 +24,9 @@
   //   outline: 1px solid hotpink;
   // }
   @include flex-col;
-  justify-content: center;
-  align-items: center;
   position: relative;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   padding: 200px 40px 40px 10px;
   background-color: $primary;
@@ -50,7 +49,7 @@
 
 /* The vertical ruler for timeline */
 .timeline {
-  position:relative;
+  position: relative;
   max-width: 1000px;
   margin: 0 auto;
 
@@ -71,10 +70,10 @@
 .photostrip-container {
   @include flex-row;
 
-  justify-content: space-evenly;
+  position: relative;
   align-items: center;
 
-  position: relative;
+  justify-content: space-evenly;
   width: 100%;
 
   background-color: inherit;
@@ -82,10 +81,10 @@
   /* The actual image */
   .photostrip {
     @include flex;
-    justify-content: center;
-    order: -1;
 
     position: relative;
+    justify-content: center;
+    order: -1;
     width: 50%;
     padding: 2em 0;
     background-color: transparent;
@@ -100,42 +99,43 @@
     }
   }
 
-/* The date of the photostrip */
+  /* The date of the photostrip */
   .date {
     order: 2;
 
     &::before {
-      content: "◀ ";
-      color: rgba($secondary, .7);
       position: relative;
       margin: 0;
       padding: 0;
+      color: rgba($secondary, .7);
+      content: '◀ ';
     }
   }
+}
 
 /* Flip the positions of the date and photostrip */
-  + .reverse {
-    flex-wrap: wrap-reverse; /* For uniformity on smaller screens */
-    padding-left: 30px;
+.reverse {
+  flex-wrap: wrap-reverse;
+  /* For uniformity on smaller screens */
+  padding-left: 30px;
 
-    .photostrip {
-      order: 2;
+  .photostrip {
+    order: 2;
+  }
+
+  .date {
+    order: -1;
+
+    &::before {
+      content: '';
     }
 
-    .date {
-      order: -1;
-
-      &::before {
-        content: "";
-      }
-
-      &::after {
-        content: " ▶";
-        color: rgba($secondary, .7);
-        position: relative;
-        margin: 0;
-        padding: 0;
-      }
+    &::after {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      color: rgba($secondary, .7);
+      content: ' ▶';
     }
   }
 }

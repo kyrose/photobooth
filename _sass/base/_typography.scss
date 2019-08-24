@@ -7,7 +7,12 @@
   * * Other: background, color, fonts...
   */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $main-font;
   font-weight: 400;
 }
@@ -17,18 +22,16 @@ a {
 
   background: none;
   color: inherit;
-  font: 1rem $link-font;
+  font: 1rem $main-font;
   text-decoration: none;
   text-transform: uppercase;
 
-  &:hover,
   &:active,
-  &:focus {
+  &:focus,
+  &:hover {
     color: $white;
   }
 }
-
-
 
 // .gradient-hover {
 //   background: none;

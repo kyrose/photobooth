@@ -8,7 +8,6 @@
   * * Other: background, color, fonts...
   */
 
-
 /**
   * Equal height and max-width
   */
@@ -16,7 +15,6 @@
   width: $width;
   height: $height;
 }
-
 
 /**
   * Transitions
@@ -38,13 +36,13 @@
   * 1. Enter $uri val with quotes
   */
 @mixin fixed-bkg($uri) {
-  background-image: url($uri);  /* 1 */
+  background-image: url($uri);
+  /* 1 */
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 
 /**
   * Clearfix mixin
@@ -52,17 +50,18 @@
   * 2. Contains top-margins of child elements
   */
 @mixin clearfix {
-  &::before,
-  &::after {
-    content: " ";    /* 1 */
-    display: table;  /* 2 */
+  &::after,
+  &::before {
+    content: ' ';
+    /* 1 */
+    display: table;
+    /* 2 */
   }
 
   &::after {
     clear: both;
   }
 }
-
 
 /**
   * Frequently used flexbox declarations
@@ -72,17 +71,17 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-	-ms-flex-pack   : center;
-	justify-content : center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 @mixin flex-row {
   @include flex;
 
-  -webkit-box-orient   : horizontal;
-	-webkit-box-direction: normal;
-	-ms-flex-flow        : row wrap;
-	flex-flow            : row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
 @mixin flex-col {
@@ -94,7 +93,6 @@
   flex-flow: column wrap;
 }
 
-
 /**
   * Translate position of objects for parallax scrolling
   */
@@ -102,7 +100,6 @@
   -webkit-transform: translateZ($val);
   transform: translateZ($val);
 }
-
 
 /**
   * Full page containers / heros

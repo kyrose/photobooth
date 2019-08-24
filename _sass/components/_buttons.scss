@@ -4,34 +4,3 @@
   * * Display & box model: display, overflow, box-sizing, width, height, padding, border, margin
   * * Other: background, color, fonts...
   */
-
-/**
-  * Parent container of button links
-  * used to prevent hover-expansion from affected rest of layout
-  */
-
-.btn-container {
-  @include size(6rem);
-  margin: .5em;
-}
-
-.btn {
-  @include size(5em);
-  @include ease-in-out-quad(background-color);
-
-  display: block;
-  margin: 0 auto;
-  transform: rotate(90deg); /* point arrow down */
-  border-radius: 50%;
-
-  background-color: $accent2;
-  color: $white;
-
-  &:hover,
-  &:focus,
-  &:active {
-    background: -webkit-gradient(linear, left top, right top, from($accent1), to($accent2));
-    background: -o-linear-gradient(left, $accent1, $accent2);
-    background: linear-gradient(to right, $accent1, $accent2);
-  }
-}

@@ -12,16 +12,17 @@ html {
   scroll-behavior: smooth;
 
   @media screen and (prefers-reduced-motion: reduce) {
-  	html {
-  		scroll-behavior: auto;
-  	}
+    html {
+      scroll-behavior: auto;
+    }
   }
 }
 
 body {
   @include ease-in-out-quad(font-size);
   margin: 0;
-  overflow-x: hidden; /* fixes issue where width:100vw extends page past screen */
+  overflow-x: hidden;
+  /* fixes issue where width:100vw extends page past screen */
   background: $primary;
   color: $secondary;
   font-family: $main-font;
