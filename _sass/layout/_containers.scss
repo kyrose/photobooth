@@ -108,7 +108,7 @@
       margin: 0;
       padding: 0;
       color: rgba($secondary, .7);
-      content: '◀ ';
+      content: '\u25c0 ';
     }
   }
 }
@@ -135,7 +135,7 @@
       margin: 0;
       padding: 0;
       color: rgba($secondary, .7);
-      content: ' ▶';
+      content: ' \u25b6';
     }
   }
 }
