@@ -2,7 +2,7 @@ title:       Kyanne & Aaron are in love.
 email:       dev@kyannerose.me
 description: >- # this means to ignore newlines until "baseurl:"
   Kyanne and Aaron
-baseurl:     "" # the subpath of your site, e.g. /blog
+baseurl:     "/photobooth" # the subpath of your site, e.g. /blog
 url:         "http://kyanne.gitlab.io/photobooth" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
