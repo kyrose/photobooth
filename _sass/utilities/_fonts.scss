@@ -4,13 +4,16 @@
 
 @font-face {
   font-family: 'Cooper Hewitt';
-  src: url('{{ site.baseurl }}/assets/fonts/CooperHewitt-BoldItalic.eot'), url('{{ site.baseurl }}/assets/fonts/CooperHewitt-BoldItalic.woff') format('woff');
+  src: url('/photobooth/assets/fonts/CooperHewitt-BoldItalic.eot'),
+       url('/photobooth/assets/fonts/CooperHewitt-BoldItalic.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Lulo';
-  src: url('{{ site.baseurl }}/assets/fonts/lulo-webfont.eot');
-  src: url('{{ site.baseurl }}/assets/fonts/lulo-webfont.eot?#iefix') format('embedded-opentype'), url('{{ site.baseurl }}/assets/fonts/lulo-webfont.woff2') format('woff2'), url('{{ site.baseurl }}/assets/fonts/lulo-webfont.woff') format('woff');
+  src: url('/photobooth/assets/fonts/lulo-webfont.eot');
+  src: url('/photobooth/assets/fonts/lulo-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/photobooth/assets/fonts/lulo-webfont.woff2') format('woff2'),
+       url('/photobooth/assets/fonts/lulo-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
