@@ -1,7 +1,12 @@
 # requiring the environment of Ruby 2.3.x
 image:          ruby:2.3
 
+cache:
+  paths:
+    - vendor/
+
 before_script:
+  - gem install bundler
   - bundle install --path vendor
 
 # the 'pages' job will deploy and build your site to the 'public' path
