@@ -4,19 +4,13 @@
 
 @font-face {
   font-family: 'Cooper Hewitt';
-  src: url('/assets/fonts/CooperHewitt-BoldItalic.eot'), url('/assets/fonts/CooperHewitt-BoldItalic.woff') format('woff');
+  src: url('{{ site.baseurl }}/assets/fonts/CooperHewitt-BoldItalic.eot'), url('{{ site.baseurl }}/assets/fonts/CooperHewitt-BoldItalic.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Lulo';
-  src: url('/assets/fonts/lulo-webfont.eot');
-  src: url('/assets/fonts/lulo-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/lulo-webfont.woff2') format('woff2'), url('/assets/fonts/lulo-webfont.woff') format('woff');
+  src: url('{{ site.baseurl }}/assets/fonts/lulo-webfont.eot');
+  src: url('{{ site.baseurl }}/assets/fonts/lulo-webfont.eot?#iefix') format('embedded-opentype'), url('{{ site.baseurl }}/assets/fonts/lulo-webfont.woff2') format('woff2'), url('{{ site.baseurl }}/assets/fonts/lulo-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-}
-
-@font-face {
-  font-family: 'LuloCleanOutline-Bold';
-  src: url('webfonts/39FC97_0_0.eot');
-  src: url('webfonts/39FC97_0_0.eot?#iefix') format('embedded-opentype');
 }
