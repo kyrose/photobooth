@@ -7,20 +7,21 @@
   */
 
 /* Color Palette*/
-$sand: #f7e5de;
-$silk: #c4b2ac;
-$carnation: #fa5951;
+
+$persimmon: #ff614e;
+$pink: #ffe1e9;
+$red: #ff1939;
 $tangerine: #ff8c7e;
-$mojo: #cd4943;
+$cherry: #b63662;
+$jp-indigo: #2f545c;
 $white: #f9f1f1;
 
 
 /* Colors to use-case name*/
-$primary: $sand;
-$p-dark: $silk;
-$secondary: $carnation;
-$s-light: $tangerine;
-$s-dark: $mojo;
+$primary: $pink;
+$secondary: $red;
+$accent1: $jp-indigo;
+$accent2: $tangerine;
 
 /* Fonts */
 $main-font: 'Lulo', 'Playfair Display', serif;

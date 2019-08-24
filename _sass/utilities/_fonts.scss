@@ -11,8 +11,12 @@
 
 @font-face {
     font-family: 'Lulo';
-    src: url('lulo-webfont.woff2') format('woff2'),
-         url('lulo-webfont.woff') format('woff');
+    src: url('/assets/fonts/lulo-webfont.eot');
+    src: url('/assets/fonts/lulo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/lulo-webfont.woff2') format('woff2'),
+         url('/assets/fonts/lulo-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {font-family: 'LuloCleanOutline-Bold';src: url('webfonts/39FC97_0_0.eot');src: url('webfonts/39FC97_0_0.eot?#iefix') format('embedded-opentype');}

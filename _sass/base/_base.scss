@@ -6,6 +6,17 @@
   * * Display & box model: display, overflow, box-sizing, width, height, padding, border, margin
   * * Other: background, color, fonts...
   */
+/* pink borders for debugging */
+
+html {
+  scroll-behavior: smooth;
+
+  @media screen and (prefers-reduced-motion: reduce) {
+  	html {
+  		scroll-behavior: auto;
+  	}
+  }
+}
 
 body {
   @include ease-in-out-quad(font-size);
@@ -14,7 +25,8 @@ body {
   background: $primary;
   color: $secondary;
   font-family: $main-font;
-  font-size: 32pt;
+  font-size: 24pt;
+  text-shadow: 1px 1px 2px $cherry;
 }
 
 img {

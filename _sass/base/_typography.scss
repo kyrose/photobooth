@@ -8,33 +8,39 @@
   */
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $link-font,
-}
-
-.title {
-  @include ease-in-out-quad(font-size);
-
-  margin: 0 auto 0.5em auto;
-  font-size: 5em;
+  font-family: $main-font;
+  font-weight: 400;
 }
 
 a {
+  @include ease-in-out-quad(color);
+
+  background: none;
+  color: inherit;
   font: 1rem $link-font;
   text-decoration: none;
   text-transform: uppercase;
-}
-
-.gradient-hover {
-  background: none;
-  color: inherit;
 
   &:hover,
   &:active,
   &:focus {
-    background: -webkit-gradient(linear, left top, right top, from($s-light), to($p-dark));
-    background: -o-linear-gradient(left, $s-light, $p-dark);
-    background: linear-gradient(to right, $s-light, $p-dark);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: $white;
   }
 }
+
+
+
+// .gradient-hover {
+//   background: none;
+//   color: inherit;
+//
+//   &:hover,
+//   &:active,
+//   &:focus {
+//     background: -webkit-gradient(linear, left top, right top, from($secondary), to($primary));
+//     background: -o-linear-gradient(left, $secondary, $primary);
+//     background: linear-gradient(to right, $secondary, $primary);
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+//   }
+// }

@@ -11,27 +11,27 @@
   */
 
 .btn-container {
-  @include size(2rem);
-
-  display: block;
+  @include size(6rem);
   margin: .5em;
 }
 
 .btn {
-  @include size(1.5rem);
-  @include ease-in-out-back(width);
+  @include size(5em);
+  @include ease-in-out-quad(background-color);
 
   display: block;
   margin: 0 auto;
   transform: rotate(90deg); /* point arrow down */
   border-radius: 50%;
 
-  background-color: $s-dark;
+  background-color: $accent2;
   color: $white;
 
   &:hover,
   &:focus,
   &:active {
-    @include size(1.8rem);
+    background: -webkit-gradient(linear, left top, right top, from($accent1), to($accent2));
+    background: -o-linear-gradient(left, $accent1, $accent2);
+    background: linear-gradient(to right, $accent1, $accent2);
   }
 }
