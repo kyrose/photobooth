@@ -49,6 +49,7 @@
 
 /* The vertical ruler for timeline */
 .timeline {
+  z-index: -1;
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
@@ -81,6 +82,7 @@
   /* The actual image */
   .photostrip {
     @include flex;
+    z-index: 999;
 
     position: relative;
     justify-content: center;
@@ -101,7 +103,11 @@
 
   /* The date of the photostrip */
   .date {
+    position: relative;
+    z-index: 500;
+    padding: 10px;
     order: 2;
+    background: $primary;
 
     &::before {
       position: relative;
@@ -120,11 +126,17 @@
   padding-left: 30px;
 
   .photostrip {
+    z-index: 999;
+    position: relative;
+    padding: 10px;
     order: 2;
   }
 
   .date {
+    position: relative;
+    z-index: 500;
     order: -1;
+    background: $primary;
 
     &::before {
       content: '';
